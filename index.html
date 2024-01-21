@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main1
+        {
+            display: flex;
+            text-decoration: solid;
+        }
+        .firstbox
+        {
+            width: 500px;
+            height:100vh;
+            font-display: 20%;
+            font-size: x-large;
+            text-size-adjust: 10px;
+            background-image: linear-gradient(skyblue,white,skyblue);        
+}  
+        .secondbox
+        {
+             width: 600px;
+             height: 100vh;
+             background-image: linear-gradient(skyblue,white,skyblue);
+             background:linear-gradient(skyblue,white,skyblue);
+             background-position:center;
+        }
+        .thirdbox
+        { 
+            width: 500px;
+            height: 100vh;
+            background:linear-gradient(skyblue,white,skyblue);
+        }
+        *{
+    margin: 0;
+    padding: 0;
+}
+div.main{
+    width: 80%;
+    margin: 40px auto 0px auto;
+}
+h2{
+    text-align: center;
+    padding: 4px;
+    font-family: sans-serif;
+}
+div.register{
+    background-color:rgba(255,255,255,0.5);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    color: black;
+    height: 90vh;
+}
+form#register{
+    margin: 40px;
+}
+label{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: arial;
+}
+input#name{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+input#submit{
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(255,100,0,0.8);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+}
+.firstbox ul a {
+   margin: 80px;
+   text-align: center;
+   text-decoration: none;
+   padding-top:30px;
+}
+.firstbox ul#list{
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+
+    box-shadow: inset 2px 2px 15px rgba(255,255,255,0.5);
+    border-radius: 7px;
+    height:90vh ;
+    
+    width: 370px ;
+    margin: 40px auto 0px auto;
+    background-color:rgba(255,255,255,0.5);  
+}
+.register{
+    height: 90vh;
+}
+
+iframe{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width:100vh;
+    height: 100vh;
+}
+.image-container{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+img.image-container{
+    width: 320px;
+    height: 195px;
+    border-radius:0.5rem ;
+    border-top-right-radius: 0.5rem;
+    margin-top: 40px;
+    background:transparent;
+    margin: 25px;
+    position: relative;
+    padding-top: 40px;
+    border-radius: 0.5rem;
+}
+img.image-container:before{
+ content:'';
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background: rgba(255,255,255,0.3);
+
+
+}
+/*
+input#submit {
+    width:200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(255,100,0,0.8);
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+}*/
+.card{
+    width: 350px;
+    height: 50px;
+    background:rgb(66, 191, 241);
+    box-shadow: 0 5px 10px rgb(8, 169, 233);
+    margin: 10% auto;
+    position: relative;
+    border-radius: 10px;
+
+}
+.card span{
+    height: 100%;
+    left: 0%;
+    background: url(flood.jpg);
+    position:absolute;
+    transition: 1s;
+}
+/*
+
+.card span:nth-child(1){
+    z-index: 10;
+    width: 25%;
+    transition-delay: 0;
+}
+.card span:nth-child(2){
+    z-index: 9;
+    width: 50%;
+    transition-delay: 0.3s;
+}
+.card span:nth-child(3){
+    z-index: 8;
+    width: 75%;
+    transition-delay: 0.6s;
+}
+.card span:nth-child(4){
+    z-index: 7;
+    width: 100%;
+    transition-delay: 0.8s;
+}
+.card:hover span{
+    transform:translateY(-100%) ;
+    transition: 1s;
+}
+.card :hover span:nth-child(1){
+    transition-delay: 0.8s;
+}
+
+
+.card:hover span:nth-child(2){
+    transition-delay: 0.6s;
+}
+.card:hover span:nth-child(3){
+    transition-delay: 0.3s;
+}
+.card:hover span:nth-child(4){
+    transition-delay: 0s;
+}
+
+.content{
+    color: #fff;
+    text-align: center;
+    padding:80px 20px;
+    width: 100%;
+    height: 70%;
+    box-sizing: border-box;
+}
+.content a{
+    width: 300px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: block;
+margin: 40px;
+padding: 0px;
+color: white;
+    border:1px solid #fff;
+    text-align: center;
+    
+}
+*/
+.card2{
+width: 350px;
+    height: 50px;
+    background:rgb(66, 191, 241);
+    box-shadow: 0 5px 10px rgb(8, 169, 233);
+    margin: 10% auto;
+    position: relative;
+    border-radius: 10px;
+}
+.card3{
+    width: 350px;
+    height: 50px;
+    background:rgb(66, 191, 241);
+    box-shadow: 0 5px 10px rgb(8, 169, 233);
+    margin: 10% auto;
+    position: relative;
+    border-radius: 10px;
+}
+/*
+.content2{
+    color: #fff;
+    text-align: center;
+    padding:80px 20px;
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+}
+.content2 a{
+    width: 300px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: block;
+margin: auto;
+
+color: white;
+    border:1px solid #fff
+
+}
+.card2 span{
+    height: 100%;
+    left: 0%;
+    background: url(fire3.jpg);
+    position:absolute;
+    transition: 1s;
+    border-width: border-box;
+}
+.card2 span:nth-child(1){
+    z-index: 10;
+    width: 25%;
+    transition-delay: 0;
+}
+.card2 span:nth-child(2){
+    z-index: 9;
+    width: 50%;
+    transition-delay: 0.3s;
+}
+.card2 span:nth-child(3){
+    z-index: 8;
+    width: 75%;
+    transition-delay: 0.6s;
+}
+.card2 span:nth-child(4){
+    z-index: 7;
+    width: 100%;
+    transition-delay: 0.8s;
+}
+.card2:hover span{
+    transform:translateY(-100%) ;
+    transition: 1s;
+}
+.card2 :hover span:nth-child(1){
+    transition-delay: 0.8s;
+}
+
+
+.card2:hover span:nth-child(2){
+    transition-delay: 0.6s;
+}
+.card2:hover span:nth-child(3){
+    transition-delay: 0.3s;
+}
+.card2:hover span:nth-child(4){
+    transition-delay: 0s;
+}
+.card3 span{
+    height: 100%;
+    left: 0%;
+    background: url(earth.jpg);
+    position:absolute;
+    transition: 1s;
+}
+.card3 span:nth-child(1){
+    z-index: 10;
+    width: 25%;
+    transition-delay: 0;
+}
+.card3 span:nth-child(2){
+    z-index: 9;
+    width: 50%;
+    transition-delay: 0.3s;
+}
+.card3 span:nth-child(3){
+    z-index: 8;
+    width: 75%;
+    transition-delay: 0.6s;
+}
+.card3 span:nth-child(4){
+    z-index: 7;
+    width: 100%;
+    transition-delay: 0.8s;
+}
+.card3:hover span{
+    transform:translateY(-100%) ;
+    transition: 1s;
+}
+.card3:hover span:nth-child(1){
+    transition-delay: 0.8s;
+}
+.card3:hover span:nth-child(2){
+    transition-delay: 0.6s;
+}
+.card3:hover span:nth-child(3){
+    transition-delay: 0.3s;
+}
+.card3:hover span:nth-child(4){
+    transition-delay: 0s;
+}
+.content3{
+    color: #fff;
+    text-align: center;
+    padding:80px 20px;
+    width: 100%;
+    height: 70%;
+    box-sizing: border-box;
+}
+
+.content3 a{
+    width: 300px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: block;
+margin: auto;
+color: white;
+    border:1px solid #fff
+
+}
+*/
+.login{
+    
+    width:200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(255,100,0,0.8);
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+
+}
+
+.content5{
+    width: 150px;
+    height: 50px;
+    background:rgb(66, 191, 241);
+    box-shadow: 0 5px 10px rgb(8, 169, 233);
+    margin: 0% auto;
+    position: relative;
+    border-radius: 5px;
+
+}
+    </style>
+</head>
+<body>
+<div class="main1">
+    <div class="firstbox">
+            <ul class="list" id="list">
+                <br>
+                <br>
+                <br>
+               <a href="/rescue.html"><i class="fa-sharp fa-solid fa-biohazard" style="color: #010813;"></i>Alert</a><br>
+               <br>
+               <a href="location.html">
+                       <i class="fa-sharp fa-solid fa-location-dot "  style="color: #0d0514;"></i>  Location</a></iframe><br>
+                  <br>
+                 <a href="/precautions.html"><i class="fa-sharp fa-solid fa-shield-heart" style="color: #010813;"></i> Precautions</a><br>
+                 <br>
+                 <a href="/contacts.html"><i class="fa-solid fa-phone-flip" style="color: #00060f;"></i>  Contacts</a><br>
+                 <br>
+                <a href="/tc.html"><i class="fa-solid fa-circle-exclamation" style="color: #01060e;"></i> T&C</a><br>
+                <br>
+              <a href="/help.html"><i class="fa-solid fa-circle-info" style="color: #000919;"></i>Help</a>
+        <img src="./logo.jpg"class="image-container">
+                 </ul>
+  </div>
+   <div class="secondbox">
+    <div class="card">
+        <span></span><span></span><span></span><span></span><br>
+        <div class="content">
+           <a href="floods.html"><h3>FLOODS </h3><i class="fa-sharp fa-solid fa-location-dot fa-bounce" style="color: #e3f0f5;"></i></a>
+        </div><br>
+        </div>
+        <div class="card2">
+            <span></span><span></span><span></span><span></span><br>
+            <div class="content2">
+                <a href="fire.html"><h3>FIRE ACCIDENTS</h3><i class="fa-sharp fa-solid fa-location-dot fa-bounce" style="color: #e3f0f5;"></i></a>
+            </div>
+            </div>
+        <div class="card3">
+            <span></span><span></span><span></span><span></span>
+            <div class="content3">
+                <a href="earthquake.html"><h3>EARTHQUAKE</h3><i class="fa-sharp fa-solid fa-location-dot fa-bounce" style="color: #e3f0f5;"></i></a>
+           </div>
+           </div>
+           <div class="content4">
+                <a href="transport.html"><h4>transport</h4></a>
+           </div>
+           <div class="content5">
+            <a href="emergrncyhealthcare.html"><h4>emergency health care</h4></a>
+           </div>
+             </div> 
+        <div class="thirdbox" >
+        <div class="main">
+            <div class="register">
+                <h2>Register</h2>
+                <form id="register" method="post">
+                    <label>Fisrt name: </label>
+                    <br>
+                    <input type="text" name="fname"
+                    id="name" placeholder="Enter your first name">
+                    <br><br>
+                    <label>Last name: </label>
+                    <br>
+                    <input type="text" name="lname"
+                    id="name" placeholder="Enter your last name">
+                    <br><br>
+                    <label>Your age: </label>
+                    <br>
+                    <input type="number" name="age"
+                    id="name" placeholder="how old are you?">
+                    <br><br>
+                    <label>Email: </label>
+                    <input type="email" name="email"
+                    id="name" placeholder="Enter your valid email">
+                    <br><br>
+                    <label>Gender:</label>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender"
+                    id="male">
+                    &nbsp;
+                    <span id= "male">Male</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender"
+                    id="female">
+                    &nbsp;
+                    <span id="female">Female</span>
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;
+                    <label>phone no:</label>
+                    <br><br>
+                    <input type="number" name="ph no"
+                    id="ph no" placeholder="contact no:">
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="submit" value="submit"
+                    name="submit" id="submit"><br>
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="./logo.html" class="login">login</a><br>
+                    </form>
+            </div>
+        </div>
+        </div>
+</body>
+</html>

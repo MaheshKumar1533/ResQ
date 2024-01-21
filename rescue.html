@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOS Alert</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:"poppins,snas-serif";
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background:linear-gradient( skyblue,white,skyblue);
+        }
+        .alert{
+            width: 420px;
+            background: transparent;
+            color:black;
+border-radius: 10px;
+padding: 30px 40px;
+backdrop-filter: blur(20px);
+box-shadow: 0 0 10px rgba(0,0,0,.2);
+        
+        }
+        #sosbutton{
+           margin:30px;
+           padding:10px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+    <h1>SOS Alert</h1>
+    <p>Click the button to send an SOS alert with your location and phone number:</p>
+    <button id="sosButton">Send SOS</button>
+
+    <script>
+        document.getElementById("sosButton").addEventListener("click", function () {
+            // Get user's location (geolocation API)
+            navigator.geolocation.getCurrentPosition(function (position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                // Prompt for phone number (you can use a form for this)
+                const phoneNumber = prompt("Enter your phone number:");
+
+                // Send SOS data to the backend (via AJAX or fetch)
+                const data = {
+                    latitude,
+                    longitude,
+                    phoneNumber
+                };
+
+                fetch("/backend/sos.php", {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                .then(response => response.json())
+                .then(responseData => {
+                    alert(responseData.message);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            }, function (error) {
+                console.error("Error getting location:", error);
+            });
+        });
+    </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agency Locations</title>
+    <!-- Include Google Maps API script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script>
+        // Initialize the map
+        function initMap() {
+            // Set the center coordinates for your area
+            var center = { lat: 40.7128, lng: -74.0060 }; // Example: New York City
+
+            // Create a map object
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: center,
+                zoom: 10 // Adjust the zoom level as needed
+            });
+
+            // Define agency locations (replace with your data)
+            var agencyLocations = [
+                {
+                    name: 'Agency 1',
+                    location: { lat: 40.7128, lng: -74.0060 }
+                },
+                {
+                    name: 'Agency 2',
+                    location: { lat: 40.730610, lng: -73.935242 }
+                },
+                // Add more agencies as needed
+            ];
+
+            // Create markers for each agency
+            agencyLocations.forEach(function(agency) {
+                var marker = new google.maps.Marker({
+                    position: agency.location,
+                    map: map,
+                    title: agency.name
+                });
+
+                // Add a click event listener to display agency information
+                marker.addListener('click', function() {
+                    // Replace with your own information display logic
+                    alert('Agency Name: ' + agency.name);
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Agency Locations in Your Area</h1>
+    <div id="map" style="height: 500px;"></div> <!-- Map container -->
+</body>
+</html>
